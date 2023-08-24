@@ -1,8 +1,7 @@
 # xcfg
 
-[![GitHub Issues](https://img.shields.io/github/issues/jonbeebe/xcfg.svg)](https://github.com/jonbeebe/xcfg/issues)
-[![ISC License](https://img.shields.io/badge/license-ISC-blue.svg)](https://github.com/jonbeebe/xcfg/blob/master/LICENSE)
-[![JavaScript Standard Style](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![GitHub Issues](https://img.shields.io/github/issues/selfagency/xcfg.svg)](https://github.com/selfagency/xcfg/issues)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/selfagency/xcfg/blob/master/LICENSE)
 
 Cross-platform config file management made easy. Works great with command-line tools and [Electron](https://electron.atom.io) apps.
 
@@ -14,21 +13,21 @@ When building command-line tools and desktop apps with [Node.js](https://nodejs.
 
 ## Installation
 
-```
-$ cd node-project
-$ npm install xcfg
+```sh
+cd node-project
+npm install xcfg
 ```
 
 ## Usage
 
 Require the module and create a new instance:
 
-```
-var Xcfg = require('xcfg')
-var xcfg = new Xcfg('net.jonbeebe.myapp')
+```js
+import Xcfg from 'xcfg';
+const xcfg = Xcfg.config('agency.self.myapp');
 ```
 
-On construction, after sanitizing the `id`, it is used to create a configuration file (if it doesn't already exist) at the following path: `~/.config/net.jonbeebe.myapp/config.json`
+On construction, after sanitizing the `id`, it is used to create a configuration file (if it doesn't already exist) at the following path: `~/.config/agency.self.myapp/config.json`
 
 After that, you can use the `xcfg` instance to get, set, and delete properties on the in-memory object:
 
@@ -45,38 +44,32 @@ The above will only manipulate the in-memory config instance. To persist changes
 xcfg.save()
 ```
 
-And while there's *a little* more to it than that, that's the basic idea and really all you need to know to use this package. To see more methods and options, view the documentation.
+And while there's _a little_ more to it than that, that's the basic idea and really all you need to know to use this package. To see more methods and options, view the documentation.
 
 ## Documentation
 
-Build and view the documentation locally:
-
-```
-$ npm run docs
-$ open ./docs/index.html
-```
+Documentation is available in the `docs` directory and can be recompiled with `npm run docs`.
 
 ## Tests
 
 ```
-$ npm run test
+npm run test
 ```
 
-All tests were written using the [mocha](https://mochajs.org) and [chai](http://chaijs.com) packages.
+All tests were written using [Jest](https://jestjs.io).
 
-## JavaScript Standard Style
+## Linting
 
-[![JavaScript Standard Style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://standardjs.com)
-
-This project conforms to the JavaScript Standard Style. You can check for style errors by running:
+This project uses eslint and Prettier to enforce code correctness and style. You can check for errors by running:
 
 ```
-$ npm run lint
+npm run lint
 ```
 
 ## License
 
-Copyright (c) 2017, Jonathan Beebe
+Copyright (c) 2023, Daniel Sieradski; 2017, Jonathan Beebe
+This code was derived from [https://github.com/jonbeebe/xcfg](https://github.com/jonbeebe/xcfg)
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above

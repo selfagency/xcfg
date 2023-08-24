@@ -1,17 +1,7 @@
 {
   "name": "xcfg",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Cross-platform config file management made easy.",
-  "main": "./lib/xcfg.js",
-  "scripts": {
-    "docs": "esdoc ./lib",
-    "test": "mocha ./lib/**/**.spec.js",
-    "lint": "./node_modules/.bin/standard ./lib/**/*.js --global describe --global it --global after"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jonbeebe/xcfg.git"
-  },
   "keywords": [
     "config",
     "cli",
@@ -20,17 +10,54 @@
     "electron",
     "command-line"
   ],
-  "author": "Jonathan Beebe <me@jonbeebe.net> (http://jonbeebe.net)",
-  "license": "ISC",
+  "homepage": "https://github.com/selfagency/xcfg#readme",
   "bugs": {
-    "url": "https://github.com/jonbeebe/xcfg/issues"
+    "url": "https://github.com/selfagency/xcfg/issues"
   },
-  "homepage": "https://github.com/jonbeebe/xcfg#readme",
-  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/selfagency/xcfg.git"
+  },
+  "license": "MIT",
+  "author": "Daniel Sieradski <daniel@self.agency> (https://self.agency)",
+  "type": "module",
+  "main": "./dist/xcfg.js",
+  "scripts": {
+    "build": "rm -rf dist; tsup",
+    "docs": "rm -rf docs; typedoc",
+    "lint": "eslint . && prettier --check",
+    "test": "jest"
+  },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "esdoc-node": "^1.0.1",
-    "mocha": "^3.2.0",
-    "standard": "^9.0.2"
+    "@blazed-space/blz-typedoc-theme": "^0.0.2",
+    "@types/jest": "^29.5.4",
+    "@types/node": "^18.17.9",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint": "^8.47.0",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-perfectionist": "^1.5.1",
+    "eslint-plugin-security": "^1.7.1",
+    "jest": "^29.6.4",
+    "prettier": "^3.0.2",
+    "ts-jest": "^29.1.1",
+    "tslib": "^2.6.2",
+    "tsup": "^7.2.0",
+    "typedoc": "^0.24.8",
+    "typescript": "^5.2.2"
+  },
+  "tsup": {
+    "entry": [
+      "src/xcfg.ts"
+    ],
+    "dts": true,
+    "format": [
+      "esm",
+      "cjs"
+    ],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true
   }
 }
