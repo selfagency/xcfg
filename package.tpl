@@ -4,7 +4,7 @@
     "url": "https://github.com/selfagency/xcfg/issues"
   },
   "description": "Cross-platform config file management made easy.",
-  "docs": "https://github.com/selfagency/xcfg#readme",
+  "docs": "https://selfagency.github.io/xcfg/",
   "exports": {
     ".": {
       "import": "./xcfg.js",
@@ -29,5 +29,5 @@
     "type": "git",
     "url": "https://github.com/selfagency/xcfg.git"
   },
-  "version": "2.0.0"
+  "version": "2.0.1"
 }
