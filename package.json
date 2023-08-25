@@ -1,6 +1,6 @@
 {
   "name": "@selfagency/xcfg",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Cross-platform config file management made easy.",
   "keywords": [
     "config",
@@ -26,7 +26,9 @@
   "scripts": {
     "build": "rm -rf dist; tsup",
     "docs": "rm -rf docs; typedoc",
-    "lint": "eslint . && prettier --check",
+    "lint": "eslint . && prettier --check ./src",
+    "package": "npm run build; npm run docs; cp README.md LICENSE.txt package.tpl dist; cd dist; mv package.tpl package.json; npm publish;",
+    "prepackage": "npm run lint; npm run test",
     "test": "jest"
   },
   "devDependencies": {
@@ -38,6 +40,7 @@
     "eslint": "^8.47.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-perfectionist": "^1.5.1",
     "eslint-plugin-security": "^1.7.1",
     "jest": "^29.6.4",

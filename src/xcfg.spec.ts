@@ -1,11 +1,22 @@
-import Xcfg from './xcfg';
-import * as path from 'path';
-import * as os from 'os';
 import * as fs from 'fs/promises';
+import * as os from 'os';
+import * as path from 'path';
+
+import Xcfg from './xcfg.ts';
 
 const id = 'agency.self.xcfg';
 const configDir = path.join(os.homedir(), '.config', id);
 const configPath = path.join(configDir, 'config.json');
+
+async function readConfig() {
+  const data = await fs.readFile(configPath, { encoding: 'utf-8' });
+  return data;
+}
+
+async function cleanUp() {
+  await fs.unlink(configPath);
+  await fs.rmdir(configDir);
+}
 
 describe('Xcfg class', () => {
   let xcfg: Xcfg;
@@ -91,13 +102,3 @@ describe('Xcfg class', () => {
 
   afterAll(cleanUp);
 });
-
-async function readConfig() {
-  const data = await fs.readFile(configPath, { encoding: 'utf-8' });
-  return data;
-}
-
-async function cleanUp() {
-  await fs.unlink(configPath);
-  await fs.rmdir(configDir);
-}
