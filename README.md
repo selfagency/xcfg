@@ -1,7 +1,9 @@
 # xcfg
 
-[![GitHub Issues](https://img.shields.io/github/issues/selfagency/xcfg.svg)](https://github.com/selfagency/xcfg/issues)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/selfagency/xcfg/blob/master/LICENSE)
+[![DeepSource](https://app.deepsource.com/gh/selfagency/xcfg.svg/?label=active+issues&show_trend=true&token=a0Px4XGYhAVJJwA_-xSHpGbm)](https://app.deepsource.com/gh/selfagency/xcfg/?ref=repository-badge)
+[![GitHub Issues](https://img.shields.io/github/issues/selfagency/xcfg.svg)](https://github.com/selfagency/xcfg/issues)
+[![Known Vulnerabilities](https://snyk.io/test/github/selfagency/xcfg/badge.svg)](https://snyk.io/test/github/selfagency/xcfg)
 
 Cross-platform config file management made easy. Works great with command-line tools and [Electron](https://electron.atom.io) apps. Originally written in CommonJS by [Jonathan Beebe](https://github.com/jonbeebe/xcfg), this is a complete rewrite in TypeScript using updated JavaScript conventions and Node.js APIs, with both ESM and CJS exports.
 
