@@ -24,7 +24,7 @@ Require the module and create a new instance:
 
 ```js
 import Xcfg from 'xcfg';
-const xcfg = Xcfg.config('agency.self.myapp');
+const xcfg = await Xcfg.create('agency.self.myapp');
 ```
 
 On construction, after sanitizing the `id`, it is used to create a configuration file (if it doesn't already exist) at the following path: `~/.config/agency.self.myapp/config.json`
