@@ -3,7 +3,7 @@
 [![GitHub Issues](https://img.shields.io/github/issues/selfagency/xcfg.svg)](https://github.com/selfagency/xcfg/issues)
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/selfagency/xcfg/blob/master/LICENSE)
 
-Cross-platform config file management made easy. Works great with command-line tools and [Electron](https://electron.atom.io) apps.
+Cross-platform config file management made easy. Works great with command-line tools and [Electron](https://electron.atom.io) apps. Originally written in CommonJS by [Jonathan Beebe](https://github.com/jonbeebe/xcfg), this is a complete rewrite in TypeScript using updated JavaScript conventions and Node.js APIs, with both ESM and CJS exports.
 
 ## Overview
 
@@ -68,8 +68,9 @@ npm run lint
 
 ## License
 
-Copyright (c) 2023, Daniel Sieradski; 2017, Jonathan Beebe
-This code was derived from [https://github.com/jonbeebe/xcfg](https://github.com/jonbeebe/xcfg)
+Copyright (c) 2023, Daniel Sieradski; 2017, Jonathan Beebe.
+
+This code was derived from [https://github.com/jonbeebe/xcfg](https://github.com/jonbeebe/xcfg).
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above

@@ -27,7 +27,7 @@
 <h2>@selfagency/xcfg - v2.0.1</h2></div>
 <div class="tsd-panel tsd-typography"><a id="md:xcfg" class="tsd-anchor"></a><h1><a href="#md:xcfg">xcfg</a></h1><p><a href="https://github.com/selfagency/xcfg/issues"><img src="https://img.shields.io/github/issues/selfagency/xcfg.svg" alt="GitHub Issues"></a>
 <a href="https://github.com/selfagency/xcfg/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a></p>
-<p>Cross-platform config file management made easy. Works great with command-line tools and <a href="https://electron.atom.io">Electron</a> apps.</p>
+<p>Cross-platform config file management made easy. Works great with command-line tools and <a href="https://electron.atom.io">Electron</a> apps. Originally written in CommonJS by <a href="https://github.com/jonbeebe/xcfg">Jonathan Beebe</a>, this is a complete rewrite in TypeScript using updated JavaScript conventions and Node.js APIs, with both ESM and CJS exports.</p>
 <a id="md:overview" class="tsd-anchor"></a><h2><a href="#md:overview">Overview</a></h2><p>When building command-line tools and desktop apps with <a href="https://nodejs.org/en/">Node.js</a>, there exists a common need for managing application configuration files.</p>
 <p><strong>xcfg</strong> is a package that saves you the trouble of validating config paths across multiple platforms and creating the config file. It makes config file management easy by handling all IO operations under the hood, and provides a simple <code>get()</code> and <code>set()</code> interface for individual configuration properties. JSON is used as the config file format to be easy on both machines and humans (and to eliminate the need for 3rd party dependencies).</p>
 <a id="md:installation" class="tsd-anchor"></a><h2><a href="#md:installation">Installation</a></h2><pre><code class="language-sh"><span class="hl-0">cd</span><span class="hl-1"> </span><span class="hl-2">node-project</span><br/><span class="hl-0">npm</span><span class="hl-1"> </span><span class="hl-2">install</span><span class="hl-1"> </span><span class="hl-2">xcfg</span>
@@ -50,8 +50,8 @@
 <a id="md:linting" class="tsd-anchor"></a><h2><a href="#md:linting">Linting</a></h2><p>This project uses eslint and Prettier to enforce code correctness and style. You can check for errors by running:</p>
 <pre><code><span class="hl-4">npm</span><span class="hl-1"> </span><span class="hl-4">run</span><span class="hl-1"> </span><span class="hl-4">lint</span>
 </code><button>Copy</button></pre>
-<a id="md:license" class="tsd-anchor"></a><h2><a href="#md:license">License</a></h2><p>Copyright (c) 2023, Daniel Sieradski; 2017, Jonathan Beebe
-This code was derived from <a href="https://github.com/jonbeebe/xcfg">https://github.com/jonbeebe/xcfg</a></p>
+<a id="md:license" class="tsd-anchor"></a><h2><a href="#md:license">License</a></h2><p>Copyright (c) 2023, Daniel Sieradski; 2017, Jonathan Beebe.</p>
+<p>This code was derived from <a href="https://github.com/jonbeebe/xcfg">https://github.com/jonbeebe/xcfg</a>.</p>
 <p>Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
 copyright notice and this permission notice appear in all copies.</p>
