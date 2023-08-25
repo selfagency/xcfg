@@ -1,1 +1,24 @@
 version = 1
+
+test_patterns = ["**/*.spec.ts"]
+
+[[analyzers]]
+name = "shell"
+
+[[analyzers]]
+name = "secrets"
+
+[[analyzers]]
+name = "test-coverage"
+
+[[analyzers]]
+name = "javascript"
+
+  [analyzers.meta]
+  environment = [
+    "nodejs",
+    "jest"
+  ]
+
+[[transformers]]
+name = "prettier"
