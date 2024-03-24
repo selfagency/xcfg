@@ -1,7 +1,6 @@
 # xcfg
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/selfagency/xcfg/blob/master/LICENSE)
-[![DeepSource](https://app.deepsource.com/gh/selfagency/xcfg.svg/?label=active+issues&show_trend=true&token=a0Px4XGYhAVJJwA_-xSHpGbm)](https://app.deepsource.com/gh/selfagency/xcfg/?ref=repository-badge)
 [![GitHub Issues](https://img.shields.io/github/issues/selfagency/xcfg.svg)](https://github.com/selfagency/xcfg/issues)
 [![Known Vulnerabilities](https://snyk.io/test/github/selfagency/xcfg/badge.svg)](https://snyk.io/test/github/selfagency/xcfg)
 
@@ -33,17 +32,17 @@ On construction, after sanitizing the `id`, it is used to create a configuration
 
 After that, you can use the `xcfg` instance to get, set, and delete properties on the in-memory object:
 
-```
-xcfg.set('foo', 'bar')
-xcfg.get('foo') // bar
-xcfg.del('foo')
-xcfg.get('foo') // undefined
+```js
+xcfg.set('foo', 'bar');
+xcfg.get('foo'); // bar
+xcfg.del('foo');
+xcfg.get('foo'); // undefined
 ```
 
 The above will only manipulate the in-memory config instance. To persist changes to disk, use `save()`:
 
-```
-xcfg.save()
+```js
+xcfg.save();
 ```
 
 And while there's _a little_ more to it than that, that's the basic idea and really all you need to know to use this package. To see more methods and options, view the documentation.
@@ -54,7 +53,7 @@ Documentation is available in the `docs` directory and can be recompiled with `n
 
 ## Tests
 
-```
+```sh
 npm run test
 ```
 
@@ -64,7 +63,7 @@ All tests were written using [Jest](https://jestjs.io).
 
 This project uses eslint and Prettier to enforce code correctness and style. You can check for errors by running:
 
-```
+```sh
 npm run lint
 ```
 

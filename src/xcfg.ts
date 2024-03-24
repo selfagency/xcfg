@@ -1,6 +1,6 @@
-import * as fs from 'fs/promises';
-import * as os from 'os';
-import * as path from 'path';
+import fs from 'fs/promises';
+import os from 'os';
+import path from 'path';
 
 const DIR_MODE = 0o0700;
 const FILE_MODE = 0o0600;
@@ -30,9 +30,9 @@ class Xcfg {
   constructor(id: string, options: Options = {}) {
     this._id = id.replace(/[/?<>\\:*|" :]/g, '.').replace(/\.+/g, '.');
 
-    const confDir = options.confdir || '.config';
-    const filename = options.filename || 'config.json';
-    this._file_mode = options.file_mode || FILE_MODE;
+    const confDir = options.confdir ?? '.config';
+    const filename = options.filename ?? 'config.json';
+    this._file_mode = options.file_mode ?? FILE_MODE;
     this._minify = Boolean(options.minify);
 
     const dirParts = [os.homedir(), confDir, this._id];
@@ -45,8 +45,8 @@ class Xcfg {
   static async create(id: string, options: Options = {}) {
     const instance = new Xcfg(id, options);
 
-    const confDir = options.confdir || '.config';
-    const dirMode = options.dir_mode || DIR_MODE;
+    const confDir = options.confdir ?? '.config';
+    const dirMode = options.dir_mode ?? DIR_MODE;
     const dirParts = [os.homedir(), confDir, instance._id];
     const dirPath = path.join(...dirParts);
 
