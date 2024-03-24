@@ -2,7 +2,7 @@ import * as fs from 'fs/promises';
 import * as os from 'os';
 import * as path from 'path';
 
-import Xcfg from './xcfg.js';
+import Xcfg from './xcfg.ts';
 
 const id = 'agency.self.xcfg';
 const configDir = path.join(os.homedir(), '.config', id);
